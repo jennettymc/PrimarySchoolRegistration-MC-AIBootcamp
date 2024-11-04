@@ -8,7 +8,10 @@ import tiktoken
 load_dotenv('../.env')
 
 # Pass the API Key to the OpenAI Client
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+# client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+
+client = OpenAI(api_key="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")
+
 
 # Function for Generating Embedding
 def get_embedding(input, model='text-embedding-3-small'):
