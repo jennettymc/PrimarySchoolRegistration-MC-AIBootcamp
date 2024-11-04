@@ -1,5 +1,10 @@
 from helper_functions import llm
 from langchain_community.document_loaders import SeleniumURLLoader
+from langchain_community.document_loaders import UnstructuredURLLoader
+# from selenium import webdriver
+
+# driver = webdriver.Chrome(executable_path='path/to/folder/chromedriver')
+# webdriver.Chrome(executable_path='/path/to/chromedriver', service_log_path='/path/to/existing/folder')
 
 def load_url_based_on_user_prompt_function(sped):
     if "Yes" in sped:
@@ -47,7 +52,9 @@ def load_url_based_on_user_prompt_function(sped):
             "https://www.moe.gov.sg/faq?categoryid=76037F9F568F46A7AA80EFDCE9AB23CD",
         ]
 
-    loader = SeleniumURLLoader(urls=urls)
+    # loader = SeleniumURLLoader(urls=urls)
+
+    loader = UnstructuredURLLoader(urls=urls)
 
     articles = loader.load()
 
