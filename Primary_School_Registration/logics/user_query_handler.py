@@ -4,7 +4,8 @@ from langchain_community.document_loaders import UnstructuredURLLoader
 from selenium import webdriver
 
 # driver = webdriver.Chrome(executable_path='path/to/folder/chromedriver')
-webdriver.Chrome(executable_path='/path/to/folder/chromedriver', service_log_path='/path/to/existing/folder')
+# webdriver.Chrome(executable_path='/path/to/folder/chromedriver', service_log_path='/path/to/existing/folder')
+driver = webdriver.Chrome()
 
 def load_url_based_on_user_prompt_function(sped):
     if "Yes" in sped:
