@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 import tiktoken
+import streamlit as st
 
 # Load the .env file
 load_dotenv('../.env')
