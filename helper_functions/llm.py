@@ -9,9 +9,9 @@ import streamlit as st
 load_dotenv('../.env')
 
 # Pass the API Key to the OpenAI Client
-# client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-client = OpenAI(api_key="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")
+#client = OpenAI(api_key="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")
 
 # Function for Generating Embedding
 def get_embedding(input, model='text-embedding-3-small'):
