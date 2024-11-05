@@ -2,10 +2,11 @@ from helper_functions import llm
 from langchain_community.document_loaders import SeleniumURLLoader
 from langchain_community.document_loaders import UnstructuredURLLoader
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 
-# driver = webdriver.Chrome(executable_path='path/to/folder/chromedriver')
-# webdriver.Chrome(executable_path='/path/to/folder/chromedriver', service_log_path='/path/to/existing/folder')
-driver = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
 def load_url_based_on_user_prompt_function(sped):
     if "Yes" in sped:
