@@ -1,12 +1,12 @@
 from helper_functions import llm
-from langchain_community.document_loaders import SeleniumURLLoader
+#from langchain_community.document_loaders import SeleniumURLLoader
 from langchain_community.document_loaders import UnstructuredURLLoader
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
+#from selenium import webdriver
+#from selenium.webdriver.chrome.service import Service as ChromeService
+#from webdriver_manager.chrome import ChromeDriverManager
 
-options = webdriver.ChromeOptions()
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+#options = webdriver.ChromeOptions()
+#driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
 def load_url_based_on_user_prompt_function(sped):
     if "Yes" in sped:
@@ -54,9 +54,9 @@ def load_url_based_on_user_prompt_function(sped):
             "https://www.moe.gov.sg/faq?categoryid=76037F9F568F46A7AA80EFDCE9AB23CD",
         ]
 
-    loader = SeleniumURLLoader(urls=urls)
+    #loader = SeleniumURLLoader(urls=urls)
 
-    #loader = UnstructuredURLLoader(urls=urls)
+    loader = UnstructuredURLLoader(urls=urls)
 
     articles = loader.load()
 
