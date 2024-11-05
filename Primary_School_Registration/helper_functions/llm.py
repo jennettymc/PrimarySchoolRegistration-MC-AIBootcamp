@@ -11,7 +11,7 @@ load_dotenv('../.env')
 # Pass the API Key to the OpenAI Client
 # client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="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")
 
 
 # Function for Generating Embedding
