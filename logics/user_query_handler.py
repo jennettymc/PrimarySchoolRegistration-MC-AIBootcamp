@@ -54,9 +54,9 @@ def load_url_based_on_user_prompt_function(sped):
             "https://www.moe.gov.sg/faq?categoryid=76037F9F568F46A7AA80EFDCE9AB23CD",
         ]
 
-    # loader = SeleniumURLLoader(urls=urls)
+    loader = SeleniumURLLoader(urls=urls)
 
-    loader = UnstructuredURLLoader(urls=urls)
+    #loader = UnstructuredURLLoader(urls=urls)
 
     articles = loader.load()
 
